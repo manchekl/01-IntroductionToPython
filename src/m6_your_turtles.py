@@ -31,7 +31,7 @@ window = rg.TurtleWindow()
 ########################################################################
 blue_turtle=rg.SimpleTurtle('turtle')
 blue_turtle.pen=rg.Pen('blue',2)
-blue_turtle.speed=100
+blue_turtle.speed=5000
 
 pink_turtle=rg.SimpleTurtle('turtle')
 pink_turtle.pen=rg.Pen('pink',5)
