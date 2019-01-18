@@ -2,15 +2,16 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Krista Manche.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
-
+import rosegraphics as rg
+window = rg.TurtleWindow()
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +29,25 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+blue_turtle=rg.SimpleTurtle('turtle')
+blue_turtle.pen=rg.Pen('blue',2)
+blue_turtle.speed=100
+
+pink_turtle=rg.SimpleTurtle('turtle')
+pink_turtle.pen=rg.Pen('pink',5)
+pink_turtle.speed=3
+
+for k in range(200):
+    blue_turtle.right(50)
+    blue_turtle.forward(k)
+    blue_turtle.left(10)
+
+pink_turtle.left(20)
+for k in range (9):
+    pink_turtle.forward(300)
+    pink_turtle.pen_up()
+    pink_turtle.go_to(rg.Point(0,0))
+    pink_turtle.left(40)
+    pink_turtle.pen_down()
+
+window.close_on_mouse_click()
